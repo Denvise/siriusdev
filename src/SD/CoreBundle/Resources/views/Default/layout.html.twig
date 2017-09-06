@@ -8,10 +8,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700|Titillium+Web" rel="stylesheet">
     <link rel="icon" href="../../favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Starter Template for Bootstrap</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>SiriusDev | {% block title %} {% endblock %}</title>
 </head>
 
 <body>
@@ -20,38 +21,31 @@
 
 <header class="container">
     <div class="col-md-5">
-        <img class="logo" src="images/logodev.png">
+        <img class="logo" src="{{ asset('images/logodev.png') }}" alt="Logo SiriusDev">
     </div>
     <div class="col-md-7">
         <nav class="navbar navbar-default">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">CV</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">A Propos</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Accueil <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">A Propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </div>
 </header>
 
 <div id="content">
+{% block body %}
 
+{% endblock %}
 </div>
 
 <footer>
     <div class="container">
-        <div class="col-md-4">
-            <h4>A Propos</h4>
-        </div>
 
-        <div class="col-md-4">
-            <h4>A Propos</h4>
-        </div>
-
-        <div class="col-md-4">
-            <h4>A Propos</h4>
-        </div>
+            <p>Copyright tous droits réservés - SiriusDev by Thomas Chérel</p>
     </div>
 </footer>
 
