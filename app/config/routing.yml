@@ -1,0 +1,3 @@
+sd_core:
+    resource: "@SDCoreBundle/Resources/config/routing.yml"
+    prefix:   /

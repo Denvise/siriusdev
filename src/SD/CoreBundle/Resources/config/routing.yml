@@ -1,0 +1,3 @@
+sd_core_homepage:
+    path:     /
+    defaults: { _controller: SDCoreBundle:Core:index }
