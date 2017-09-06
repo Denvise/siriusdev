@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="695271da-c42a-4ef4-ba7b-a574e45e5ac1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/286.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/5645.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/developpement.jpg" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -410,12 +412,12 @@
       <workItem from="1504638158624" duration="4748000" />
       <workItem from="1504685568301" duration="544000" />
       <workItem from="1504687623188" duration="1315000" />
-      <workItem from="1504708946925" duration="3862000" />
+      <workItem from="1504708946925" duration="3961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10469000" />
+    <option name="totallyTimeSpent" value="10568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="33" width="1922" height="1048" extended-state="6" />
