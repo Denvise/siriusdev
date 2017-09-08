@@ -1,4 +1,5 @@
 {% extends "SDCoreBundle:Default:layout.html.twig" %}
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 
 {% block title %}
     {{ parent() }} Contact
@@ -16,5 +17,14 @@
     </div>
     <div id="Contact">
         <h1 class="container">Me contacter</h1>
+    </div>
+    <div id="formulaire">
+        <div class="row">
+            <div class="col-sm-4">
+                {{form_start(form)}}
+                {{form_widget(form)}}
+                {{form_end(form)}}
+            </div>
+        </div>
     </div>
 {% endblock %}

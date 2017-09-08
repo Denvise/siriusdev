@@ -4,6 +4,7 @@ namespace SD\CoreBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,17 +19,30 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, array(
-                'attr' => array('placeholder' => 'Nom')
+                'label' => false,
+                'attr' => array('placeholder' => 'Nom'),
+                'label_attr' => ['class' => 'label_block'],
             ))
             ->add('email', EmailType::class, array(
-                'attr' => array('placeholder' => 'exemple@mail.com')
+                'label' => false,
+                'attr' => array('placeholder' => 'exemple@mail.com'),
+                'label_attr' => ['class' => 'label_block'],
             ))
             ->add('subject', TextType::class, array(
-                'attr' => array('placeholder' => 'Votre projet')
+                'label' => false,
+                'attr' => array('placeholder' => 'Votre projet'),
+                'label_attr' => ['class' => 'label_block'],
             ))
             ->add('message', TextareaType::class, array(
-                'attr' => array('placeholder' => 'En quoi puis-je vous aider')
-            ));
+                'label' => false,
+                'attr' => array('placeholder' => 'En quoi puis-je vous aider'),
+                'label_attr' => ['class' => 'label_block'],
+            ))
+
+            ->add('Envoyer', SubmitType::class, array(
+            'label' => 'Envoyer',
+            'attr' => array('class' => 'btn-success')
+    ));
     }
     
     /**
