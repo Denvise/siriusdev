@@ -17,4 +17,11 @@ class CoreController extends Controller
             'age' => $age
         ]);
     }
+
+    public function contactAction()
+    {
+
+        return $this->render('SDCoreBundle::contact.html.twig', [
+        ]);
+    }
 }

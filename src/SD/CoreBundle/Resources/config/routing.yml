@@ -1,3 +1,7 @@
 sd_core_homepage:
     path:     /
     defaults: { _controller: SDCoreBundle:Core:index }
+
+sd_core_contact:
+    path:     /contact
+    defaults: { _controller: SDCoreBundle:Core:contact }
