@@ -37,19 +37,19 @@ class CoreController extends Controller
             $contact->setEmail($email);
             $contact->setSubject($subject);
             $contact->setMessage($message);
+
+            $message = \Swift_Message::newInstance()
+
+                ->setSubject($subject)
+                ->setFrom('jardisindustrie@gmail.com')
+                ->setTo($email)
+                ->setBody($this->renderView('sendmail.html.twig', array(
+                    'name' => $name,
+                    'message' => $message,
+                    'email' => $email,
+                    'subject' => $subject)), 'text/html');
+            $this->get('mailer')->send($message);
         }
-
-        $message = \Swift_Message::newInstance()
-
-            ->setSubject($subject)
-            ->setFrom('jardisindustrie@gmail.com')
-            ->setTo($email)
-            ->setBody($this->renderView('sendmail.html.twig', array(
-                'name' => $name,
-                'message' => $message,
-                'email' => $email,
-                'subject' => $subject)), 'text/html');
-        $this->get('mailer')->send($message);
 
         return $this->render('SDCoreBundle::contact.html.twig', [
             'form' => $form->createView()

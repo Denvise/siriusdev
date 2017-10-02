@@ -1,5 +1,5 @@
 {% extends "SDCoreBundle:Default:layout.html.twig" %}
-{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
 
 {% block title %}
     {{ parent() }} Contact
@@ -18,13 +18,30 @@
     <div id="Contact">
         <h1 class="container">Me contacter</h1>
     </div>
-    <div id="formulaire">
-        <div class="row">
-            <div class="col-sm-4">
+    <div id="formulaire" class="container">
+            <div id="contact_form" class="col-sm-4">
                 {{form_start(form)}}
                 {{form_widget(form)}}
                 {{form_end(form)}}
             </div>
-        </div>
+            <div id="devis" class="col-sm-6">
+                <h4>-- \\ Pour obtenir une réponse claire //--</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+                    Pellentesque egestas neque pellentesque, viverra sapien feugiat,
+                    iaculis quam. Nunc mattis faucibus finibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+                    Pellentesque egestas neque pellentesque, viverra sapien feugiat,
+                    iaculis quam. Nunc mattis faucibus finibus.</p>
+                <div class="block-yellow">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+                        Pellentesque egestas neque pellentesque, viverra sapien feugiat,
+                        iaculis quam. Nunc mattis faucibus finibus.</p>
+                </div>
+                <div class="block-darkgrey">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
+                        Pellentesque egestas neque pellentesque, viverra sapien feugiat,
+                        iaculis quam. Nunc mattis faucibus finibus.</p>
+                </div>
+            </div>
     </div>
 {% endblock %}
